@@ -29,7 +29,7 @@ public class FragmentListado extends Fragment {
 	private ListView lstListado;
 	private ArrayList<Correo> listCorreo = new ArrayList<Correo>();
 	private CorreosListener listener;
-    FragmentListado a;
+   // FragmentListado a;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, 
@@ -46,7 +46,7 @@ public class FragmentListado extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle state) {
         super.onActivityCreated(state);
-        a= (FragmentListado) getFragmentManager().findFragmentById(R.id.FrgListado);
+        //a= (FragmentListado) getFragmentManager().findFragmentById(R.id.FrgListado);
 		lstListado = (ListView)getView().findViewById(R.id.LstListado);
 
 		lstListado.setAdapter(new AdaptadorCorreos(getActivity(), R.layout.listitem_correo, listCorreo));
@@ -67,7 +67,7 @@ public class FragmentListado extends Fragment {
                 }*/
                 Correo sel= listCorreo.get(pos);
                 listener.onCorreoSeleccionado(sel);
-                a.setCorreosListener(listener);
+                //a.setCorreosListener(listener);
 			}
 			
 		});

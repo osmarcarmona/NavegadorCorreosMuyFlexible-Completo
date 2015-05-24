@@ -17,4 +17,6 @@ public class DetalleActivity extends FragmentActivity {
     FragmentDetalle detalle = (FragmentDetalle) getSupportFragmentManager().findFragmentById(R.id.FrgDetalle);
 	detalle.mostrarDetalle(getIntent().getStringExtra("cuerpo"));
 	}
+
+
 }

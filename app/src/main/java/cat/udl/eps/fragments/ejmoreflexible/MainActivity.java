@@ -14,6 +14,9 @@ public class MainActivity extends FragmentActivity implements CorreosListener {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
+
+        FragmentListado frg = (FragmentListado) getSupportFragmentManager().findFragmentById(R.id.FrgListado);
+        frg.setCorreosListener(this);
 	}
 
 	@Override
